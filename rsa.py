@@ -50,7 +50,6 @@ def ext_gcd(e, phi):
     else:
         d, x, y = ext_gcd(phi, e % phi)
         return d, y, x - y * (e // phi)
-    # (e*y)+ (x - y * (e // phi) ) = d
 
 
 def multiplicative_inverse(e, phi):
