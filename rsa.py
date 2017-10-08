@@ -36,7 +36,6 @@ def gcd(a, b):
     >>> gcd(3, 7)
     1
     """
-
     while (a != 0) and (b != 0):
         if a > b:
             a %= b
