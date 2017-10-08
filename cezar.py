@@ -1,4 +1,3 @@
-
 def encrypt_caesar(plaintext):
     """
     Encrypts plaintext using a Caesar cipher.
@@ -10,7 +9,6 @@ def encrypt_caesar(plaintext):
     >>> encrypt_caesar("")
     ''
     """
-
     ciphertext = ''
     for element in plaintext:
         if 97 <= (ord(element) + 3) <= 122 or 65 <= (ord(element) + 3) <= 90:
@@ -34,11 +32,11 @@ def decrypt_caesar(ciphertext):
     ''
     """
     plaintext = ""
-    for ttl in ciphertext:
-        if (97 <= (ord(ttl) - 3) <= 122) or (65 <= (ord(ttl) - 3) <= 90):
-            plaintext += chr(ord(ttl) - 3)
-        elif (94 <= (ord(ttl) - 3) < 97) or (62 <= (ord(ttl) - 3) < 65):
-            plaintext += chr(ord(ttl) + 26 - 3)
+    for element in ciphertext:
+        if (97 <= (ord(element) - 3) <= 122) or (65 <= (ord(element) - 3) <= 90):
+            plaintext += chr(ord(element) - 3)
+        elif (94 <= (ord(element) - 3) < 97) or (62 <= (ord(element) - 3) < 65):
+            plaintext += chr(ord(element) + 26 - 3)
         else:
-            plaintext += ttl
+            plaintext += element
     return plaintext
