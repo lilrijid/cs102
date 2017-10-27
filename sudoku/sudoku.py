@@ -93,9 +93,7 @@ def find_empty_positions(grid):
     for i in range(len(grid)):
         for j in range(len(grid[0])):
             if grid[i][j] == '.':
-                pos = (i, j)
-                break
-    return pos
+                return i, j
 
 def find_possible_values(grid, pos):
     """ Вернуть все возможные значения для указанной позиции
