@@ -50,7 +50,7 @@ def get_friends(user_id = config['VK_ID'], fields=''):
     assert user_id > 0, "user_id must be positive integer"    
     domain = "https://api.vk.com/method"
     query_params = {
-    'domain' : domain,
+    'domain' : config['DOMAIN'],
     'access_token': config['VK_ACCESS_TOKEN'],
     'user_id': user_id,
     'fields': fields,
