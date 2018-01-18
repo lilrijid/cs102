@@ -47,8 +47,7 @@ def get_friends(user_id = config['VK_ID'], fields=''):
     """
     assert isinstance(user_id, int), "user_id must be positive integer"
     assert isinstance(fields, str), "fields must be string"
-    assert user_id > 0, "user_id must be positive integer"    
-    domain = "https://api.vk.com/method"
+    assert user_id > 0, "user_id must be positive integer"
     query_params = {
     'domain' : config['DOMAIN'],
     'access_token': config['VK_ACCESS_TOKEN'],
